@@ -17,6 +17,7 @@ public class TourDestinationRequest {
     private String tourDestinationTime; //관광지 이용시간
     private String tourDestinationPicture; //관광지 사진
     private String tourDestinationType; //관광지 사진
+    private Integer tourDestinationPay; //관광지 가격
     public TourDestination toEntity()
     {
         return TourDestination
@@ -29,6 +30,7 @@ public class TourDestinationRequest {
                 .tourDestinationName(tourDestinationName)
                 .tourDestinationType(tourDestinationType)
                 .tourDestinationContentDetail(tourDestinationContentDetail)
+                .tourDestinationPay(tourDestinationPay)
                 .build();
     }
 

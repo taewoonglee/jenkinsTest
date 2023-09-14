@@ -26,4 +26,7 @@ public interface TourDestinationRepository extends JpaRepository<TourDestination
 
     @Query("select t from TourDestination as t where t.tourDestinationType=:type")
     List<TourDestination> findByType(String type);
+
+    List<TourDestination> findByTourDestinationPayGreaterThan(Integer pay);
+    List<TourDestination> findByTourDestinationPayLessThanEqual(Integer pay);
 }

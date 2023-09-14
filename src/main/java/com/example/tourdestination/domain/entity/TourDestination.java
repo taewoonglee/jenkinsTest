@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Entity
 
 @Table(name = "tourdestinations")
@@ -25,5 +27,5 @@ public class TourDestination {
     private String tourDestinationTime; //관광지 이용시간
     @Column (length = 10000)
     private String tourDestinationPicture; //관광지 사진
-
+    private Integer tourDestinationPay; //관광지 가격 (무료 or 유료)
 }

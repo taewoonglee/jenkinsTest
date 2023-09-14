@@ -26,16 +26,6 @@ public class TourDestinationController {
     {
         return tourDestinationService.getAll();
     }
-//    @GetMapping("/{name}")
-//    public List<TourDestinationResponse> getAllByName(@PathVariable("roomId") String name)
-//    {
-//        return tourDestinationService.getAllByName(name);
-//    }
-//    @GetMapping("/{location}")
-//    public List<TourDestinationResponse> getAllByLocation(@PathVariable("location") String location)
-//    {
-//        return tourDestinationService.getAllByName(location);
-//    }
     @GetMapping("/{id}")
     public TourDestination getById(@PathVariable("id")Long id)
     {
@@ -51,5 +41,11 @@ public class TourDestinationController {
     {
         return tourDestinationService.getByType(type);
     }
+    @GetMapping("/searchbypay/{pay}")
+    public List<TourDestination> getByPay(@PathVariable("pay")Integer pay)
+    {
+        return tourDestinationService.getByPay(pay);
+    }
+
 
 }
