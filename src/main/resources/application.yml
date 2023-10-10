@@ -1,18 +1,11 @@
 server:
-  port: 9010
+  port: 8081
 spring:
-  application:
-    name: tour-service
   datasource:
-    url: jdbc:mysql://localhost:3306/destination?serverTimezone=Asia/Seoul
-    username: root
-    password: 1q2w3e4r!!
+    url: jdbc:h2:mem:test
+    username: sa
+    password:
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
-
-  mvc:
-    hiddenmethod:
-      filter:
-        enabled=true:
