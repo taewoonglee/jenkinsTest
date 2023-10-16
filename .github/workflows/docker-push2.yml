@@ -32,6 +32,69 @@ jobs:
       
     - name: Docker push
       uses: docker push ${{ secrets.DOCKER_USERNAME}}/${{ secrets.DOCKER_REPOSITORY}}
-
+    - name: ssh
+      uses: appleboy/ssh-action@v1.0.0
+      with:
+      # SSH host address.
+      host: # optional
+      # SSH port number.
+      port: # optional, default is 22
+      # Passphrase for the SSH key.
+      passphrase: # optional
+      # SSH username.
+      username: # optional
+      # SSH password.
+      password: # optional
+      # Enable synchronous execution if multiple hosts are involved.
+      sync: # optional
+      # Include more ciphers by using insecure ciphers.
+      use_insecure_cipher: # optional
+      # Allowed cipher algorithms. If unspecified, a sensible default is used.
+      cipher: # optional
+      # Timeout duration for establishing SSH connection to the host.
+      timeout: # optional, default is 30s
+      # Timeout duration for SSH commands execution.
+      command_timeout: # optional, default is 10m
+      # Content of the SSH private key. For example, the raw content of ~/.ssh/id_rsa.
+      key: # optional
+      # Path to the SSH private key file.
+      key_path: # optional
+      # SHA256 fingerprint of the host public key.
+      fingerprint: # optional
+      # SSH proxy host address.
+      proxy_host: # optional
+      # SSH proxy port number.
+      proxy_port: # optional, default is 22
+      # SSH proxy username.
+      proxy_username: # optional
+      # SSH proxy password.
+      proxy_password: # optional
+      # SSH proxy key passphrase.
+      proxy_passphrase: # optional
+      # Timeout duration for establishing SSH connection to the proxy host.
+      proxy_timeout: # optional, default is 30s
+      # Content of the SSH proxy private key. For example, the raw content of ~/.ssh/id_rsa.
+      proxy_key: # optional
+      # Path to the SSH proxy private key file.
+      proxy_key_path: # optional
+      # SHA256 fingerprint of the proxy host public key.
+      proxy_fingerprint: # optional
+      # Allowed cipher algorithms for the proxy. If unspecified, a sensible default is used.
+      proxy_cipher: # optional
+      # Include more ciphers for the proxy by using insecure ciphers.
+      proxy_use_insecure_cipher: # optional
+      # Commands to be executed.
+      script: # optional
+      # Stop the script after the first failure.
+      script_stop: # optional
+      # Environment variables to be passed to the shell script.
+      envs: # optional
+      # Flexible configuration for environment value transfer.
+      envs_format: # optional
+      # Enable debug mode.
+      debug: # optional
+      # pass all environment variable to shell script.
+      allenvs: # optional
+  
 
 
