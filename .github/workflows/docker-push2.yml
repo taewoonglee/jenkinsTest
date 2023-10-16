@@ -2,7 +2,7 @@ name: docker-push2
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "docker" ]
 jobs:
 
   build:
