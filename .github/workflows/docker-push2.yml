@@ -1,13 +1,8 @@
-name: Docker Image CD
+name: Docker push
 
 on:
   push:
     branches: [ "main" ]
-  # pull_request:
-  #   branches: [ "main" ]
-  # dfadfasdf
-  
-
 jobs:
 
   build:
