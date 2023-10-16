@@ -37,7 +37,14 @@ jobs:
       with:
         host: ${{secrets.HOST_IP}}
         username: ${{secrets.HOST_USERNAME}}
-        password: ${{secrets.HOST_KEY}}
+        key: ${{secrets.HOST_KEY}}
+        script:
+          sudo su
+          docker stop ${{ secrets.DOCKER_REPOSITORY}}
+          docker rm ${{ secrets.DOCKER_REPOSITORY}}
+          docker run --name ${{ secrets.DOCKER_REPOSITORY}} -d -p 8080:8081 ${{ secrets.DOCKER_USERNAME}}/${{ secrets.DOCKER_REPOSITORY}}
+      
+          
 
 
   
