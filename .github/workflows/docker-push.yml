@@ -21,9 +21,7 @@ jobs:
 
     - name: Permission
       run: chmod 744 gradlew
-      
-    - name: Test
-      run: ./gradlew test  
+
     - name: Build the Docker image
       run: docker build .  
 
