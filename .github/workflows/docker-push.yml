@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: Docker Image CD
 
 on:
   push:
@@ -21,6 +21,9 @@ jobs:
 
     - name: Permission
       run: chmod 744 gradlew
+      
+    - name : test
+      run: ./gradlew clean build
 
     - name: Build the Docker image
       run: docker build .  
