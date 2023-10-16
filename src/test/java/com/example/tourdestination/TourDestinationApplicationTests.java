@@ -9,7 +9,7 @@ class TourDestinationApplicationTests {
 
 	@Test
 	void test1() {
-		Assertions.assertEquals(1+10,10);
+		Assertions.assertEquals(1+10,11);
 	}
 
 }
